@@ -1,0 +1,72 @@
+.header-slider-container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    line-height: 0;
+    margin-bottom: 20px; /* This adds the gap below the banner */
+  }
+  
+  .header-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px; /* Increased height for desktop */
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+  }
+  
+  .slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .slider-dot.active {
+    background: white;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .header-slider {
+      height: 300px; /* Slightly increased for mobile */
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .header-slider {
+      height: 500px; /* Increased for tablet */
+    }
+  }
